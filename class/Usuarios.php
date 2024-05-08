@@ -1,6 +1,6 @@
 <?php
 class Usuarios{
-    public $IdUsuarios;
+    public $IdUsuarios = $foo;
     public $NombreUsuarios;
     public $idPerfil;
     public $EmailUsuarios;
@@ -38,8 +38,8 @@ class UserPermisos {
 
 class UsuariosControl{
     public static function GetElement($where, $conn) {
-        $sql = "SELECT * FROM Usuarios WHERE ? ";
-        $params = array($where);
+        $sql = "SELECT * FROM Usuarios WHERE $where ";
+        // $params = array($where);
         $stmt = sqlsrv_query($conn, $sql);
     
         if ($stmt === false) {

@@ -5,7 +5,7 @@
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");
 
     include '../conexion.php';
-    include '../class/libros.php';
+    include "../class/libros.php";
 
     $conn = Connection::OpenConnection();
     $data = json_decode(file_get_contents('php://input'));

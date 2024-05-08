@@ -19,25 +19,6 @@ $data = json_decode(file_get_contents("php://input"));
 $resultado = null;
 
 try {
-    // if(isset($data) && !empty($data)){
-    //     $NombreUsuarios = $data->NombreUsuarios;
-    //     if(!preg_match("/'/",$NombreUsuarios)){
-    //         $where = "NombreUsuarios = '$NombreUsuarios'";
-    //         $ContrasenaUsuarios = $data->ContrasenaUsuarios;
-    //         if(!empty($usuario = UsuariosControl::GetElement($where,$conn))){
-    //             if(md5($ContrasenaUsuarios) == $usuario->ContrasenaUsuarios){
-    //                 $resultado = UsuariosControl::Login($usuario->IdUsuarios,$conn);
-    //             }else{
-    //                 $resultado = 502;
-    //             }
-    //         }else{
-    //             $resultado = 501;
-    //         }        
-    //     }else{
-    //         $resultado = 500;
-    //     }
-    // }
-
     if (!isset($data) && empty($data)) {
         $resultado = 499;
         retornar($Connection,$conn,$resultado);
